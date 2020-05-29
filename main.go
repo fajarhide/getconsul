@@ -71,7 +71,7 @@ func get() {
 		return
 	}
 
-	fmt.Println("Updated at", t.Format("15:04:05 2006-01-02 \n"))
+	fmt.Println("Updated from consul at", t.Format("15:04:05 2006-01-02 \n"))
 	i := os.Getenv("INTERVAL")
 	interval, err := strconv.Atoi(i)
 	time.Sleep( time.Duration(interval) * time.Second)
