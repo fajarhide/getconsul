@@ -52,12 +52,18 @@ spec:
           items:
           - key: .env
             path: .env
+      - name: shared-data
+        emptyDir: {}
 ```
 
-secret env-consul is a `.env` get-consul which is saved in kubernetes secrets.
+secret env-consul is a `.env` get-consul which is saved in kubernetes secrets and `/directory/store/data` is directory location a store data from consul.
 
+Enviroment can be added as follows :
+
+```bash
+KEY=/directory/store/data/namekey
+```
 
 ## TODO
-- Web GUI
-- External Service
+- External as a Service
 - Record response status for each executed
