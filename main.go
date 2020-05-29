@@ -64,14 +64,14 @@ func get() {
 		f.Close()
 		return
 	}
-	fmt.Println(l, "bytes written successfully")
+	
+	fmt.Println("Updated from consul - -", t.Format("[02/Jan/2006:15:04:05 +0700]"))
+	fmt.Println(l, "bytes written value successfully")
 	err = f.Close()
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
-
-	fmt.Println("Updated from consul at", t.Format("15:04:05 2006-01-02 \n"))
 	i := os.Getenv("INTERVAL")
 	interval, err := strconv.Atoi(i)
 	time.Sleep( time.Duration(interval) * time.Second)
