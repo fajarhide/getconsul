@@ -3,6 +3,7 @@ package main
 import (
     "fmt"
 	"time"
+	"strconv"
 	"net/http"
 	"log"
 	"io/ioutil"
@@ -63,7 +64,9 @@ func main() {
     	    return
 		}
 		
+		i := os.Getenv("INTERVAL")
+		interval, err := strconv.Atoi(i)
 		fmt.Println("Updated at", t.Format("15:04:05 2006-01-02 \n"))
-		time.Sleep(5 * time.Second)
+		time.Sleep( time.Duration(interval)  * time.Second)
 	}
 }	
