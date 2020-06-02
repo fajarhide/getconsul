@@ -30,7 +30,7 @@ func main() {
 }
 
 func get() {
-	resp, err := http.Get(fmt.Sprintf("https://%s@%s/v1/kv/%s?token=%s",os.Getenv("BASIC_AUTH"), os.	Getenv("URL_CONSUL"), os.Getenv("KV_PATH"), os.Getenv("TOKEN")))
+	resp, err := http.Get(fmt.Sprintf("https://%s@%s/v1/kv/%s?token=%s", os.Getenv("BASIC_AUTH"), os.Getenv("URL_CONSUL"), os.Getenv("KV_PATH"), os.Getenv("TOKEN")))
 	if err != nil {
 		fmt.Println(err)
 		return
