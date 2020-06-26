@@ -1,4 +1,5 @@
 # Get KV Consul
+[![Made in Indonesia](https://made-in-indonesia.github.io/made-in-indonesia.svg)](https://github.com/made-in-indonesia/made-in-indonesia)
 Version  v0.0.1
 
 The kv get data value via API consul use Authentication
